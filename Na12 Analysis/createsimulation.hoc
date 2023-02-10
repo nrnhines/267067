@@ -114,4 +114,4 @@ proc save_recording() { localobj timevoltage, fh
     timevoltage.fprint(0, fh, "%e ")
     fh.close()
 }
-load_file("fit.hoc")
+//load_file("fit.hoc")
