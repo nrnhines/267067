@@ -1,0 +1,15 @@
+
+mechanisms/branching.mod is not compatible with coreneuron and is not
+needed there. I modify nrnivmodl-core with 3 lines so that
+for mod_dir in "${ROOT_DIR}/share/modfile" "$params_MODS_PATH" ;
+do  
+    # copy mod files and include files
+    files=( "$mod_dir/"*.mod "$mod_dir/"*.inc "$mod_dir/"*.h* )
+    for f in "${files[@]}";
+    do
+        if [[ $f == *"branching.mod" ]]; then
+            echo "skipping $f"
+            continue
+        fi
+        # copy mod files only if it's changed (to avoid rebuild)
+
