@@ -7,7 +7,7 @@ NEURON {
 	SUFFIX na12mut
 	USEION na READ ena WRITE ina
 	RANGE  gbar, ar2, thegna
-	GLOBAL vhalfs,sh,tha,qa,Ra,Rb,thi1,thi2,qd,qg,mmin,hmin,q10,Rg,qq,Rd,tq,thinf,qinf,vhalfs,a0s,zetas,gms,smax,vvh,vvs
+	GLOBAL vhalfs,sh,tha,qa,Ra,Rb,thi1,thi2,qd,qg,mmin,hmin,q10,Rg,qq,Rd,tq,thinf,qinf,a0s,zetas,gms,smax,vvh,vvs
 }
 
 PARAMETER {
@@ -137,4 +137,5 @@ FUNCTION trap0(v,th,a,q) {
 	} else {
 	        trap0 = a * q
  	}
-}	
+}
+
